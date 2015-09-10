@@ -1,0 +1,39 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:section title="Admiral Notification">
+        <f:entry
+            title="Admiral Access Key"
+            help="/plugin/admiral/help-admiralAccessKey.html"
+            field="awsAccessKey">
+
+            <f:textbox name="admiral.admiralAccessKey" />
+        </f:entry>
+        <f:entry
+            title="Admiral Secret Key"
+            help="/plugin/admiral/help-admiralSecretKey.html"
+            field="awsSecretKey">
+
+            <f:password name="admiral.admiralSecretKey" />
+        </f:entry>
+        <f:entry
+            title="Default notification topic ARN"
+            help="/plugin/admiral/help-defaultTopicArn.html"
+            field="defaultTopicArn">
+
+            <f:textbox name="admiral.defaultTopicArn" />
+        </f:entry>
+        <f:entry
+            title="Default message (default: {BUILD_URL})"
+            help="/plugin/admiral/help-defaultMessageTemplate.html"
+            field="defaultMessageTemplate">
+
+            <f:textbox name="admiral.defaultMessageTemplate" />
+        </f:entry>
+        <f:entry
+            title="Send notification also on start of build?"
+            help="/plugin/admiral/help-defaultSendNotificationOnStart.html"
+            field="defaultSendNotificationOnStart">
+
+            <f:booleanRadio name="admiral.defaultSendNotificationOnStart" />
+        </f:entry>
+    </f:section>
+</j:jelly>

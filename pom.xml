@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>plugin</artifactId>
+        <version>1.628</version>
+    </parent>
+
+    <artifactId>admiral</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>hpi</packaging>
+    <name>Admiral Build Notifier</name>
+    <description>Publish build notifications to Admiral to initiate deployment pipeline</description>
+    <url>https://wiki.jenkins-ci.org/display/JENKINS/Admiral+Notifier</url>
+
+    <developers>
+        <developer>
+            <id>mberwanger</id>
+            <name>Martin H Berwanger</name>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:ssh://github.com/shipright/admiral-plugin.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/shipright/admiral-plugin.git</developerConnection>
+        <url>https://github.com/shipright/admiral-plugin</url>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.2.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.1</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>
